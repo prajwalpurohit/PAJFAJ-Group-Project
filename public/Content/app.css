@@ -80,3 +80,17 @@ hr{
    
 
 }
+.logo_1{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.logo_box{
+    position: relative;
+    right: 600px;
+}
+.nav-item{
+    padding-right: 15px;
+}
+
+
