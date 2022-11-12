@@ -1,6 +1,6 @@
 /* custom css goes here */
 .float-container {
-    border: 3px solid #fff;
+    
     padding: 20px;
 }
 
@@ -18,5 +18,64 @@
 }
 .display-4{
     text-align: center;
+    color: #482673;
+    font-weight: bold;
 }
 
+body{
+    background-color: #F6EBF4;
+    color: #482673;
+}
+nav{
+    background-color: #F6EBF4;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 9px;
+    
+}
+nav li a{
+    color: #482673;
+    
+
+}
+a:hover{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.fixed-bottom{
+    background-color: #F6EBF4;
+    color: #482673;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 45px;
+}
+.container{
+    margin-top: 50px;
+}
+hr{
+    position: relative;
+    border: none;
+    height: 3px;
+    background-color: rgba(0, 0, 255, .2);
+    width: 94rem;
+    
+}
+.btn-survery{
+    border-radius: 10px;
+    padding: 9px;
+    border: none;
+    background-color: #482673;
+    
+}
+.btn-survery a{
+    color: white;
+}
+.sign-btn{
+    border: none;
+    background-color: #482673;
+    color:white;
+
+}
