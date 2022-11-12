@@ -1,12 +1,12 @@
 <!-- Main Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">COMP229</a>
+    <a class="navbar-brand" href="/">PAJFAJ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav mr-auto">
 
         <% if (title == "Home"){ %>
         <li class="nav-item active">
@@ -48,4 +48,12 @@
           <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact </a>
         </li>
     </div>
+
+    <% if (title == "Contact") { %>
+      <li class="nav-item active">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <button><a class="nav-link" style="color: black" href="/contact"></i> Sign Up </a></button>
+      </li>
   </nav>
