@@ -21,10 +21,6 @@ router.get('/products', function(req, res, next) {
   res.render('products', { title: 'Products'});
 });
 
-/* GET Services page. */
-router.get('/surveylist', function(req, res, next) {
-  res.render('surveylist', { title: 'Services List'});
-});
 
 /* GET Contact Us page. */
 router.get('/survey', function(req, res, next) {
