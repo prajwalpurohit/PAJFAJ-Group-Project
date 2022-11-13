@@ -123,6 +123,12 @@ a{
 .card.p-3.mb-2{
     height: 300px;
 }
-
+.table{
+    margin-right: 700px ;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    right: 80px;
+}
 
 
