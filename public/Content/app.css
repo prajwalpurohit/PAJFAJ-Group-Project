@@ -105,6 +105,7 @@ hr{
     color: #482673;
     font-weight: bold;
 }
+
 .group-photo{
     border-radius: 10px;
     margin-top: 25px;
@@ -114,4 +115,14 @@ hr{
     margin-right: auto;
     width: 60%;
 }
+a{
+    text-decoration: none;
+    color: #482673;
+    text-decoration-line : none;
+}
+.card.p-3.mb-2{
+    height: 300px;
+}
+
+
 
