@@ -1,0 +1,68 @@
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
+
+<!-- Main Content -->
+<hr>
+<main class="container">
+  <div>
+    <h1 class="display-4" style="margin-bottom: 50px;">Survey</h1>
+
+    <table  class="table table-bordered table-hover">
+      <thead class=" thead-light">
+        <tr>
+          <th class="text-center">First Name</th>
+          <th class="text-center">Last Name</th>
+          <th class="text-center">Email </th>
+          <th class="text-center">Address</th>
+          <th class="text-center">GPA </th>
+          <th class="text-center">Country </th>
+          <th class="text-center">Date of Birth </th>
+          <th class="text-center">Major </th>
+          <th class="text-center">Phone Number </th>
+          <th class="text-center">Institution Name </th>
+          <th class="text-center">Semester </th>
+          <th class="text-center">Comments </th>
+        </tr>
+
+
+      </thead>
+      
+
+      <% for(let count  = 0; count < SurveyList.length; count++) { %>
+        <tr>
+          <td class="text-center"><%= SurveyList[count].firstName %></td>
+          <td class="text-center"><%= SurveyList[count].lastName %></td>
+          <td class="text-center"><%= SurveyList[count].email %></td>
+          <td class="text-center"><%= SurveyList[count].address %></td>
+          <td class="text-center"><%= SurveyList[count].GPA %></td>
+          <td class="text-center"><%= SurveyList[count].country %></td>
+          <td class="text-center"><%= SurveyList[count].dateOfBirth %></td>
+          <td class="text-center"><%= SurveyList[count].major %></td>
+          <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
+          <td class="text-center"><%= SurveyList[count].school %></td>
+          <td class="text-center"><%= SurveyList[count].semester %></td>
+          <td class="text-center"><%= SurveyList[count].comments %></td>
+
+          <td class="text-center col-1">
+            <a href="" class="btn btn-primary btn-sm">
+            <i class="fas fa-pencil-alt"></i> Edit</a>
+          </td>
+          <td class="text-center col-1">
+            <a href="" class="btn btn-danger btn-sm">
+            <i class="fas fa-trash-alt"></i> Delete</a>
+          </td>
+
+        </tr>
+      <% } %>
+
+    </table>
+
+
+
+
+
+
+
+
+  </div>
+</main>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

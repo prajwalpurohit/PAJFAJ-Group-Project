@@ -1,3 +1,3 @@
 module.exports = {
-  URI: "mongodb://127.0.0.1:27017/book_store",
+  URI: "mongodb+srv://Anson:2KO8oPCz4wuUH9HL@cluster0.5eccgjt.mongodb.net/PAJFAJ?retryWrites=true&w=majority",
 };

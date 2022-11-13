@@ -21,14 +21,10 @@ router.get('/products', function(req, res, next) {
   res.render('products', { title: 'Products'});
 });
 
-/* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services'});
-});
 
 /* GET Contact Us page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact'});
+router.get('/survey', function(req, res, next) {
+  res.render('survey', { title: 'Contact'});
 });
 
 
