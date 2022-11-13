@@ -13,6 +13,7 @@ router.get("/", (req, res, next) => {
     } else {
       
       res.render("survey", {title: "Survey", SurveyList: surveyList})
+      console.log(surveyList)
      
     }
   });
