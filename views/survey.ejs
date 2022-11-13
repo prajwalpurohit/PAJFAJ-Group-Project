@@ -4,7 +4,42 @@
 <hr>
 <main class="container">
   <div>
-    <h1 class="display-4">Survey</h1>
+    <h1 class="display-4" style="margin-bottom: 50px;">Survey</h1>
+
+    <table class="table table-bordered table-striped table-hover">
+      <tr>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Email </th>
+        <th class="text-center">Address</th>
+        <th class="text-center">GPA </th>
+        <th class="text-center">Country </th>
+        <th class="text-center">Date of Birth </th>
+        <th class="text-center">Major </th>
+        <th class="text-center">Phone Number </th>
+        <th class="text-center">Institution Name </th>
+        <th class="text-center">Semester </th>
+        <th class="text-center">Comments </th>
+      </tr>
+
+      <% for(let count  = 0; count < SurveyList.length; count++) { %>
+        <tr>
+          <td class="text-center"><%= SurveyList[count].firstName %></td>
+          <td class="text-center"><%= SurveyList[count].lastName %></td>
+          <td class="text-center"><%= SurveyList[count].email %></td>
+          <td class="text-center"><%= SurveyList[count].address %></td>
+          <td class="text-center"><%= SurveyList[count].GPA %></td>
+          <td class="text-center"><%= SurveyList[count].country %></td>
+          <td class="text-center"><%= SurveyList[count].dateoOfBirth %></td>
+          <td class="text-center"><%= SurveyList[count].major %></td>
+          <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
+          <td class="text-center"><%= SurveyList[count].school %></td>
+          <td class="text-center"><%= SurveyList[count].semester %></td>
+          <td class="text-center"><%= SurveyList[count].comments %></td>
+        </tr>
+      <% } %>
+
+    </table>
 
 
 
