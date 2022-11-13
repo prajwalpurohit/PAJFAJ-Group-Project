@@ -22,13 +22,13 @@ router.get('/products', function(req, res, next) {
 });
 
 /* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services'});
+router.get('/surveylist', function(req, res, next) {
+  res.render('surveylist', { title: 'Services List'});
 });
 
 /* GET Contact Us page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact'});
+router.get('/survey', function(req, res, next) {
+  res.render('survey', { title: 'Contact'});
 });
 
 
