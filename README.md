@@ -17,4 +17,4 @@ Members:
 - Jiho Choi
 - Jan Rodel Escareses
 
-Copyright 2022, PAJFAJ
+&copy; Copyright 2022, PAJFAJ
