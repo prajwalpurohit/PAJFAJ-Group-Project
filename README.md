@@ -9,11 +9,11 @@ This is the first release, and we plan to implement the following in future rele
 
 Team Name: PAJFAJ
 Members:
-Thuan An (Anson) Quan
-Ariel Chau Zhou
-Fawad Zaheer
-Prajwal Purohit
-Jiho Choi
-Jan Rodel Escareses
+- Thuan An (Anson) Quan
+- Ariel Chau Zhou
+- Fawad Zaheer
+- Prajwal Purohit
+- Jiho Choi
+- Jan Rodel Escareses
 
 Copyright 2022, PAJFAJ
