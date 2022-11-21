@@ -27,6 +27,17 @@ router.get('/survey', function(req, res, next) {
   res.render('survey', { title: 'Contact'});
 });
 
+router.get('/login', function(req, res, next) {
+  if (!req.user) {
+    res.render('auth/login', {
+      title: "Login Page",
+      messages: req.flash("loginMessage"),
+      displayName: req.user ? req.user.displayName : "",
+  });
+} else {
+  return res.redirect("/");
+}
+});
 
 
 module.exports = router;
