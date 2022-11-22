@@ -13,7 +13,7 @@
 (function () {
     function Start() {
       console.log("App Started...");
-      let deletebuttons = document.querySelectorAll(".btn-success");
+      let deletebuttons = document.querySelectorAll(".editA");
       for (button of deletebuttons) {
         button.addEventListener("click", (event) => {
           if (!confirm("Congratulations! You have successfully created an account!")) {
