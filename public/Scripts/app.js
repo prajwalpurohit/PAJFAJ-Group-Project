@@ -9,3 +9,19 @@
     window.addEventListener("load", Start);
 
 })();
+
+(function () {
+    function Start() {
+      console.log("App Started...");
+      let deletebuttons = document.querySelectorAll(".btn-success");
+      for (button of deletebuttons) {
+        button.addEventListener("click", (event) => {
+          if (!confirm("Congratulations! You have successfully created an account!")) {
+            event.preventDefault();
+            window.location.assign("/survey-list");
+          }
+        });
+      }
+    }
+    window.addEventListener("load", Start);
+  })();
