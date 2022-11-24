@@ -128,5 +128,12 @@ a{
     position: relative;
     right: 80px;
 }
-
+.login-container,.register-container {
+    padding: 10px;
+    margin-top: 10px;
+}
+.container-log, .container-reg{ 
+    display: flex;
+    justify-content: center;
+}
 

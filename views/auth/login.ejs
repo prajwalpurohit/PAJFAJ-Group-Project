@@ -1,18 +1,19 @@
 <%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+<hr>
 <main class="container">
   <div>
     <h1 class="display-4 text-center"><b>Welcome to my <%= title %></b></h1>
   </div>
 </main>
 
-<main class="container">
+<main class="container-log">
   <!-- Message Area -->
   <% if(messages.length > 0) {%>
   <div class="alert alert-danger"><%= messages %></div>
   <% } %>
   <br><br>
   <div class="row">
-    <div class="col-3 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+    <div class="login-container">
       <h1>Please Login !!!</h1><br>
       <form method="POST" autocomplete="off">
         <fieldset class="form-group">
