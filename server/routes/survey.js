@@ -2,21 +2,40 @@ let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
 
-// connect to our Book Model
-let Survey = require("../models/survey");
+let jwt = require('jsonwebtoken');
 
-/* GET Route for the survey List page - READ OPeration */
-router.get("/", (req, res, next) => {
-  Survey.find((err, surveyList) => {
-    if (err) {
-      return console.error(err);
-    } else {
-      
-      res.render("survey", {title: "Survey", SurveyList: surveyList})
-      console.log(surveyList)
-     
-    }
-  });
-});
+let passport = require("passport");
+
+// connect to our Book Model
+//let Book = require("../models/book");
+
+let surveyController = require("../controllers/survey");
+
+// helper function for guard purposes
+function requireAuth(req, res, next) {
+  // check if the user is logged in
+  if (!req.isAuthenticated()) {
+    return res.redirect("/login");
+  }
+  next();
+}
+
+/* GET Route for the Business List page - READ Operation */
+router.get("/", surveyController.displaySurveyList);
+
+/* GET Route for displaying the Add page - CREATE Operation */
+router.get("/add", requireAuth, listsController.addPage);
+
+/* POST Route for processing the Add page - CREATE Operation */
+router.post("/add", requireAuth, listsController.addProcessPage);
+
+/* GET Route for displaying the Edit page - UPDATE Operation */
+router.get("/edit/:id", requireAuth, listsController.displayEditPage);
+
+/* POST Route for processing the Edit page - UPDATE Operation */
+router.post("/edit/:id", requireAuth, listsController.processingEditPage);
+
+/* GET to perform  Deletion - DELETE Operation */
+router.get("/delete/:id", requireAuth, listsController.deletePage);
 
 module.exports = router;
