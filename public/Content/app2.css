@@ -1,0 +1,45 @@
+.container-survey{
+    border-width: 1px;
+    border-color: #222;
+    text-align: center;
+    margin-left: 100px;
+    width: 900px;
+    margin-bottom: 100px;
+    width: 900px; 
+    
+}
+
+.container-survey h1{
+    text-align: center;
+    margin-left: 600px;
+}
+.container-survey .btn-primaryA{
+    margin-left: 600px;
+}
+  
+.cont-edit{
+    margin-bottom: 60px;
+}
+.cont-add h1{
+    text-align: center;
+}
+.cont-edit h1{
+    text-align: center;
+}
+.cont-edit{
+    
+    display: flex;
+    justify-content: center;
+}
+.cont-edit .row{
+    margin-top: -80px;
+    width: 1000px;
+    margin-left: 90px;
+
+}
+hr{
+    border: none;
+    height: 3px;
+    background-color: rgba(0, 0, 255, .2);
+    width: 150%;
+}

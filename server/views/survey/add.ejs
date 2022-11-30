@@ -1,116 +1,134 @@
-<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
-<!-- Main Content -->
-<div class="container">
+<!--Name: Fawad Mohammed Zaheer
+Student Id: 301230271
+Course: COMP_229(Web Application Development)
+Instructor: Malek Zakeyabanu
+Assignment: Assignment-2(Authentication)
+--> 
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container cont-add">
     <div class="row">
-        <div class="offset-md-2 col-md-5"><br><br>
-            <h1><%= title %></h1><br>
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1><hr>
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="fnameTextField">First Name </label>
+                    <label for="fnameTextField">First Name</label>
                     <input type="text" class="form-control"
                     id="fnameTextField"
-                    placeholder="Enter the first name!"
+                    placeholder="Enter the first name"
                     name="firstName" required>
                 </div>
 
+                <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="lnameTextField">Last Name </label>
+                    <label for="lnameTextField">Last Name</label>
                     <input type="text" class="form-control"
                     id="lnameTextField"
-                    placeholder="Enter the last name!"
+                    placeholder="Enter the first name"
                     name="lastName" required>
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="emailTextField">Email address </label>
+                    <label for="emailTextField">Email Address</label>
                     <input type="text" class="form-control"
                     id="emailTextField"
-                    placeholder="Enter the email address!"
+                    placeholder="Enter the email address"
                     name="email" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="addressTextField">Address </label>
+                    <label for="addressTextField">Address</label>
                     <input type="text" class="form-control"
                     id="addressTextField"
-                    placeholder="Enter the address!"
+                    placeholder="Enter the address"
                     name="address" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="gpaTextField">GPA </label>
+                    <label for="gpaTextField">GPA</label>
                     <input type="text" class="form-control"
                     id="gpaTextField"
-                    placeholder="Enter the GPA!"
+                    placeholder="Enter your gpa"
                     name="GPA" required>
                 </div>
-
+               
+                <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="countryTextField">Country </label>
+                    <label for="countryTextField">Country Name</label>
                     <input type="text" class="form-control"
                     id="countryTextField"
-                    placeholder="Enter your country!"
+                    placeholder="Enter the country"
                     name="country" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="dobTextField">Date of birth </label>
+                    <label for="dobTextField">Date of Birth</label>
                     <input type="text" class="form-control"
                     id="dobTextField"
-                    placeholder="Enter the date of birth!"
+                    placeholder="Enter the date of birth"
                     name="dateOfBirth" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="majorTextField">Your major </label>
+                    <label for="majorTextField">Major</label>
                     <input type="text" class="form-control"
                     id="majorTextField"
-                    placeholder="Enter your major!"
+                    placeholder="Enter your major"
                     name="major" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="numberTextField">Phone number </label>
+               <div class="form-group">
+                    <label for="numberTextField">Phone Number</label>
                     <input type="text" class="form-control"
                     id="numberTextField"
-                    placeholder="Enter the phone number!"
+                    placeholder="Enter the phone number"
                     name="phoneNumber" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="schoolTextField">Your school </label>
+                    <label for="InstitutionTextField">Institution Name</label>
                     <input type="text" class="form-control"
-                    id="schoolTextField"
-                    placeholder="Enter your school!"
+                    id="InstitutionTextField"
+                    placeholder="Enter the Institution name"
                     name="school" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="semesterTextField">Semester </label>
+                    <label for="semTextField">Semester</label>
                     <input type="text" class="form-control"
-                    id="semesterTextField"
-                    placeholder="Enter the semester!"
+                    id="semTextField"
+                    placeholder="Enter the semester"
                     name="semester" required>
                 </div>
 
+                 <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="commentsTextField">Comments </label>
-                    <textarea rows="5" cols="30" type="text" class="form-control"
+                    <label for="commentsTextField">Comments</label>
+                    <input type="text" class="form-control"
                     id="commentsTextField"
-                    placeholder="Enter your comments here!"
+                    placeholder="Any comments"
                     name="comments" required>
                 </div>
-                <br>
+
                 <button class="btn btn-primary" type="submit">
-                <i class="fas fa-edit"></i> Submit</button>
+                    <i class="fas fa-edit"></i> Submit</button>
                 
-                <a href="/survey-list" class="btn btn-warning">
-                <i class="fas fa-undo"></i> Cancel</a>
+                    <a href="/survey-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
 
             </form>
         </div>
 
     </div>
 </div>
-<%- include ../partials/bottom_nav.ejs %> <%- include ../partials/footer.ejs %>
+

@@ -3,22 +3,33 @@ let router = express.Router();
 
 let indexController = require("../controllers/index");
 
-router.get('/', indexController.displayHomePage);
+/* GET home page. */
+router.get("/", indexController.displayHomepage);
 
-router.get('/index', indexController.displayHomePage);
+/* GET home page. */
+router.get("/home", indexController.displayHomepage);
 
-router.get('/about',indexController.displayAboutPage);
+/* GET About Us page. */
+router.get("/about", indexController.displayAboutpage);
 
-router.get("/products", indexController.displayProductpage);
+/* GET Products page. */
+router.get("/products", indexController.displayProductspage);
 
+
+/* GET Route for displaying the Login page */
 router.get("/login", indexController.displayLoginPage);
 
+/* POST Route for processing the Login page */
 router.post("/login", indexController.processLoginPage);
 
+/* GET Route for displaying the Register page */
 router.get("/register", indexController.displayRegisterPage);
 
+/* POST Route for processing the Register page */
 router.post("/register", indexController.processRegisterPage);
 
+/* GET to perform UserLogout */
 router.get("/logout", indexController.performLogout);
+
 
 module.exports = router;

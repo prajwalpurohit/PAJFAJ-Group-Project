@@ -1,131 +1,132 @@
-<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+<!--Name: Fawad Mohammed Zaheer
+Student Id: 301230271
+Course: COMP_229(Web Application Development)
+Instructor: Malek Zakeyabanu
+Assignment: Assignment-2(Authentication)-->
+
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
 <!-- Main Content -->
-<div class="container">
+  <div class="container cont-edit">
     <div class="row">
         <div class="offset-md-2 col-md-5"><br><br>
-            <h1><%= title %></h1><br>
+            <h1><%= title %></h1><hr>
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="fnameTextField">First Name </label>
+                    <label for="fnameTextField">First Name</label>
                     <input type="text" class="form-control"
                     id="fnameTextField"
-                    placeholder="Enter the first name!"
-                    name="firstName"
-                    value="<%= SurveyList.firstName %>" 
+                    placeholder="Enter the contact name!"
+                    name="firstName" 
+                    value="<%= SurveyList.firstName %>"
                     required>
                 </div>
 
-                <div class="form-group">
-                    <label for="lnameTextField">Last Name </label>
+                <div class="form-group">                    
+                    <label for="lnameTextField">Last Name</label>
                     <input type="text" class="form-control"
                     id="lnameTextField"
-                    placeholder="Enter the last name!"
+                    placeholder="Enter the first name"
                     name="lastName" 
-                    value="<%= SurveyList.lastName %>" 
+                    value="<%= SurveyList.lastName %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="emailTextField">Email address </label>
+                    <label for="emailTextField">Email Address</label>
                     <input type="text" class="form-control"
                     id="emailTextField"
-                    placeholder="Enter the email address!"
+                    placeholder="Enter the email address"
                     name="email" 
-                    value="<%= SurveyList.email %>" 
+                    value="<%= SurveyList.email %>"
                     required>
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="addressTextField">Address </label>
+                    <label for="addressTextField">Address</label>
                     <input type="text" class="form-control"
                     id="addressTextField"
-                    placeholder="Enter the address!"
-                    name="address" 
-                    value="<%= SurveyList.address %>" 
+                    placeholder="Enter the address"
+                    name="address"
+                    value="<%= SurveyList.address %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="gpaTextField">GPA </label>
+                    <div class="form-group">
+                    <label for="gpaTextField">GPA</label>
                     <input type="text" class="form-control"
                     id="gpaTextField"
-                    placeholder="Enter the GPA!"
-                    name="GPA" 
-                    value="<%= SurveyList.GPA %>" 
+                    placeholder="Enter your gpa"
+                    name="GPA"
+                    value="<%= SurveyList.GPA %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="countryTextField">Country </label>
+                    <div class="form-group">
+                    <label for="countryTextField">Country Name</label>
                     <input type="text" class="form-control"
                     id="countryTextField"
-                    placeholder="Enter your country!"
-                    name="country" 
-                    value="<%= SurveyList.country %>" 
+                    placeholder="Enter the country"
+                    name="country"
+                    value="<%= SurveyList.country %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="dobTextField">Date of birth </label>
+                    <div class="form-group">
+                    <label for="dobTextField">Date of Birth</label>
                     <input type="text" class="form-control"
                     id="dobTextField"
-                    placeholder="Enter the date of birth!"
-                    name="dateOfBirth" 
-                    value="<%= SurveyList.dateOfBirth %>" 
+                    placeholder="Enter the date of birth"
+                    name="dateOfBirth"
+                    value="<%= SurveyList.dateOfBirth %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="majorTextField">Your major </label>
+                    <div class="form-group">
+                    <label for="majorTextField">Major</label>
                     <input type="text" class="form-control"
                     id="majorTextField"
-                    placeholder="Enter your major!"
-                    name="major" 
-                    value="<%= SurveyList.major %>" 
+                    placeholder="Enter your major"
+                    name="major"
+                    value="<%= SurveyList.major %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="numberTextField">Phone number </label>
+                    <div class="form-group">
+                    <label for="numberTextField">Phone Number</label>
                     <input type="text" class="form-control"
                     id="numberTextField"
-                    placeholder="Enter the phone number!"
-                    name="phoneNumber" 
-                    value="<%= SurveyList.phoneNumber %>" 
+                    placeholder="Enter the phone number"
+                    name="phoneNumber"
+                    value="<%= SurveyList.phoneNumber %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="schoolTextField">Your school </label>
+                   <div class="form-group">
+                    <label for="InstitutionTextField">Institution Name</label>
                     <input type="text" class="form-control"
-                    id="schoolTextField"
-                    placeholder="Enter your school!"
-                    name="school" 
-                    value="<%= SurveyList.school %>" 
+                    id="InstitutionTextField"
+                    placeholder="Enter the Institution name"
+                    name="school"
+                    value="<%= SurveyList.school %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="semesterTextField">Semester </label>
+                    <div class="form-group">
+                    <label for="semTextField">Semester</label>
                     <input type="text" class="form-control"
-                    id="semesterTextField"
-                    placeholder="Enter the semester!"
-                    name="semester" 
-                    value="<%= SurveyList.semester %>" 
+                    id="semTextField"
+                    placeholder="Enter the semester"
+                    name="semester"
+                    value="<%= SurveyList.semester %>"
                     required>
-                </div>
 
-                <div class="form-group">
-                    <label for="commentsTextField">Comments </label>
-                    <textarea rows="5" cols="30" type="text" class="form-control"
+                    <div class="form-group">                    
+                    <label for="commentsTextField">Comments</label>
+                    <input type="text" class="form-control"
                     id="commentsTextField"
-                    placeholder="Enter your comments here!"
-                    name="comments" 
-                    value="<%= SurveyList.comments %>" 
-                    required>
-                </div>
-                <br>
+                    placeholder="Any comments"
+                    name="comments"
+                    value="<%= SurveyList.comments %>"
+                    required><br>
+
                 <button class="btn btn-primary" type="submit">
                 <i class="fas fa-edit"></i> Submit</button>
                 
@@ -137,4 +138,8 @@
 
     </div>
 </div>
-<%- include ../partials/bottom_nav.ejs %> <%- include ../partials/footer.ejs %>
+
+    <%- include ../partials/bottom_nav.ejs %>   <%- include ../partials/footer.ejs %>
+
+
+

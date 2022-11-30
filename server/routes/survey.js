@@ -1,15 +1,16 @@
-let express = require("express");
+let express = require('express');
 let router = express.Router();
 let mongoose = require("mongoose");
 
+//connect to our Survey model
 let jwt = require('jsonwebtoken');
 
 let passport = require("passport");
 
-// connect to our Book Model
-//let Book = require("../models/book");
+// connect to our survey Model
+//let Survey = require("../models/survey");
 
-let surveyController = require("../controllers/survey");
+let listsController = require("../controllers/survey");
 
 // helper function for guard purposes
 function requireAuth(req, res, next) {
@@ -21,7 +22,7 @@ function requireAuth(req, res, next) {
 }
 
 /* GET Route for the Business List page - READ Operation */
-router.get("/", surveyController.displaySurveyList);
+router.get("/", listsController.displaySurveyList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get("/add", requireAuth, listsController.addPage);

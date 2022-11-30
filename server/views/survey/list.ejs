@@ -1,98 +1,114 @@
-<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+<!--Name: Fawad Mohammed Zaheer
+Student Id: 301230271
+Course: COMP_229(Web Application Development)
+Instructor: Malek Zakeyabanu
+Assignment: Assignment-2(Authentication)
+--> 
 
-<!-- Main Content -->
-<hr>
-<main class="container">
-  <div class="row">
-    <h1 class="display-4 text-center" style="margin-bottom: 50px;">Survey</h1>
-    
-    <% if(typeof displayName == 'string' && displayName) { %>
-      <a href="/survey-list/add" class="btn btn-primary" role="button">
-      <i class="fas fa-plus-circle"></i> Add a new list</a>
-    <% } %><br>
-    <br>
-    <table  class="table table-bordered table-hover">
-      <thead class=" thead-light">
-        <tr>
-          <% if(typeof displayName == 'string' && displayName) { %>
-            <th class="text-center">First Name</th>
-            <th class="text-center">Last Name</th>
-            <th class="text-center">Email </th>
-            <th class="text-center">Address</th>
-            <th class="text-center">GPA </th>
-            <th class="text-center">Country </th>
-            <th class="text-center">Date of Birth </th>
-            <th class="text-center">Major </th>
-            <th class="text-center">Phone Number </th>
-            <th class="text-center">Institution Name </th>
-            <th class="text-center">Semester </th>
-            <th class="text-center">Comments </th>
-            <th></th>
-            <th></th>
-          <% } else { %>
-            <th class="text-center">First Name</th>
-            <th class="text-center">Last Name</th>
-            <th class="text-center">Email </th>
-            <th class="text-center">Address</th>
-            <th class="text-center">GPA </th>
-            <th class="text-center">Country </th>
-            <th class="text-center">Date of Birth </th>
-            <th class="text-center">Major </th>
-            <th class="text-center">Phone Number </th>
-            <th class="text-center">Institution Name </th>
-            <th class="text-center">Semester </th>
-            <th class="text-center">Comments </th>
-            <th></th>
-            <th></th>
-          <% } %>
-        </tr>
-      </thead>
-      
+<%- include ../partials/header.ejs %>
 
-      <% for(let count  = 0; count < SurveyList.length; count++) { %>
-        <tr>
-          <% if(typeof displayName == "string" && displayName) { %>
-            <td class="text-center"><%= SurveyList[count].firstName %></td>
-            <td class="text-center"><%= SurveyList[count].lastName %></td>
-            <td class="text-center"><%= SurveyList[count].email %></td>
-            <td class="text-center"><%= SurveyList[count].address %></td>
-            <td class="text-center"><%= SurveyList[count].GPA %></td>
-            <td class="text-center"><%= SurveyList[count].country %></td>
-            <td class="text-center"><%= SurveyList[count].dateOfBirth %></td>
-            <td class="text-center"><%= SurveyList[count].major %></td>
-            <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
-            <td class="text-center"><%= SurveyList[count].school %></td>
-            <td class="text-center"><%= SurveyList[count].semester %></td>
-            <td class="text-center"><%= SurveyList[count].comments %></td>
+<%- include ../partials/main_nav.ejs %>
+  
 
-            <td class="text-center col-1">
-              <a href="/survey-list/edit/<%= SurveyList[count]._id %>" class="btn btn-primary btn-warning">
-              <i class="fas fa-pencil-alt"></i> Edit</a>
-            </td>
-            <td class="text-center col-1">
-              <a href="/survey-list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
-              <i class="fas fa-trash-alt"></i> Delete</a>
-            </td>
-          <% } else { %>
-            <td class="text-center"><%= SurveyList[count].firstName %></td>
-            <td class="text-center"><%= SurveyList[count].lastName %></td>
-            <td class="text-center"><%= SurveyList[count].email %></td>
-            <td class="text-center"><%= SurveyList[count].address %></td>
-            <td class="text-center"><%= SurveyList[count].GPA %></td>
-            <td class="text-center"><%= SurveyList[count].country %></td>
-            <td class="text-center"><%= SurveyList[count].dateOfBirth %></td>
-            <td class="text-center"><%= SurveyList[count].major %></td>
-            <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
-            <td class="text-center"><%= SurveyList[count].school %></td>
-            <td class="text-center"><%= SurveyList[count].semester %></td>
-            <td class="text-center"><%= SurveyList[count].comments %></td>
-          <% } %>
-        </tr>
-      <% } %>
+  <!-- Main Content -->
+  <main class="container-survey">
+    <div>
+        <div><br>
+            <h1 class="text-center"><%= title %></h1><hr>
+            
+            <% if(typeof displayName == 'string' && displayName) { %>
+                <a href="/survey-list/add" class="btn btn-primary btn-primaryA" role="button">
+                <i class="fas fa-plus-circle"></i> Add a Contact</a>
+            <% } %><br>
+            
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                        <th class="text-center">First Name</th>
+                        <th class="text-center">Last Name</th>                        
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">GPA</th>
+                        <th class="text-center">Country</th>
+                        <th class="text-center">Date of Birth</th>
+                        <th class="text-center">Major</th>
+                        <th class="text-center">Phone number</th>
+                        <th class="text-center">Institution name</th>
+                        <th class="text-center">Semester</th>
+                        <th class="text-center">Comments</th>
 
-    </table>
+                        <th></th>
+                        <th></th>
+                    <% } else { %>
+                        <th class="text-center">First Name</th>
+                        <th class="text-center">Last Name</th>                        
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">GPA</th>
+                        <th class="text-center">Country</th>
+                        <th class="text-center">Date of Birth</th>
+                        <th class="text-center">Major</th>
+                        <th class="text-center">Phone number</th>
+                        <th class="text-center">Institution name</th>
+                        <th class="text-center">Semester</th>
+                        <th class="text-center">Comments</th>
+                        <th></th>
+                        <th></th>
+                    <% } %>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < SurveyList.length; count++) { %>
+                    <tr>
+                        <% if(typeof displayName == "string" && displayName) { %>
+                           <td class="text-center"><%= SurveyList[count].firstName %></td>
+                           <td class="text-center"><%= SurveyList[count].lastName %></td>
+                           <td class="text-center"><%= SurveyList[count].email %></td>
+                           <td class="text-center"><%= SurveyList[count].address %></td>
+                           <td class="text-center"><%= SurveyList[count].GPA %></td>
+                           <td class="text-center"><%= SurveyList[count].country %></td>
+                           <td class="text-center"><%= SurveyList[count].dateOfBirth %></td>
+                           <td class="text-center"><%= SurveyList[count].major %></td>
+                           <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
+                           <td class="text-center"><%= SurveyList[count].school %></td>
+                           <td class="text-center"><%= SurveyList[count].semester %></td>
+                           <td class="text-center"><%= SurveyList[count].comments %></td>
+                           <td class="text-center">
+                            <a href="/survey-list/edit/<%= SurveyList[count]._id %>" class="btn btn-primary"> <i class="fa"></i>Edit</a>
+                          </td>
+                          <td class="text-center">
+                            <a href="/survey-list/delete/<%= SurveyList[count]._id %>" class="btn btn-warning btn-sm"> <i class="fa"></i>Delete</a>
+                          </td>
+                         <% } else { %>
+                           <td class="text-center"><%= SurveyList[count].firstName %></td>
+                           <td class="text-center"><%= SurveyList[count].lastName %></td>
+                           <td class="text-center"><%= SurveyList[count].email %></td>
+                           <td class="text-center"><%= SurveyList[count].address %></td>
+                           <td class="text-center"><%= SurveyList[count].GPA %></td>
+                           <td class="text-center"><%= SurveyList[count].country %></td>
+                           <td class="text-center"><%= SurveyList[count].dateOfBirth %></td>
+                           <td class="text-center"><%= SurveyList[count].major %></td>
+                           <td class="text-center"><%= SurveyList[count].phoneNumber %></td>
+                           <td class="text-center"><%= SurveyList[count].school %></td>
+                           <td class="text-center"><%= SurveyList[count].semester %></td>
+                           <td class="text-center"><%= SurveyList[count].comments %></td>
+                         <% } %>
+                       </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+ 
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
 
 
-  </div>
-</main>
-<%- include ../partials/bottom_nav.ejs %> <%- include ../partials/footer.ejs %>
+
+
+

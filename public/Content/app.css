@@ -1,4 +1,9 @@
 /* custom css goes here */
+body{
+    padding: 2px;
+    margin: 2px;
+}
+
 .float-container {
     
     padding: 20px;
@@ -62,7 +67,7 @@ a:hover{
 .container{
     margin-top: 50px;
 }
-hr{
+.first-hr{
     position: relative;
     border: none;
     height: 3px;
@@ -136,4 +141,5 @@ a{
     display: flex;
     justify-content: center;
 }
+
 

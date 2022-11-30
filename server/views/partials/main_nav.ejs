@@ -32,6 +32,8 @@
           <a class="nav-link" href="/products"><i class="fab fa-elementor"></i> Products </a>
         </li>
 
+        
+
         <% if (title == "Contact") { %>
         <li class="nav-item active">
         <% } else  { %>
@@ -39,7 +41,6 @@
         <% } %>
           <a class="nav-link" href="/survey-list"><i class="fas fa-mobile-alt"></i> Survey </a>
         </li>
-
         <% if(typeof displayName == 'string' && displayName) { %>
           <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
           <li class="nav-item"><a href="/logout" class="nav-link">
